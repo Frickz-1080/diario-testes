@@ -10,7 +10,7 @@ body{
     flex-direction: column;
     background-color: white;
 }
-a {text-decoration: none; color: black;}
+a {text-decoration: none; color: rgb(255, 0, 0);}
 
 .hero{ 
     background-image: url("img/Escola.png");
