@@ -11,7 +11,10 @@ body{
     flex-direction: column;
     background-color: white;
 }
-a {text-decoration: none; color: rgb(0, 0, 0);}
+a {
+    text-decoration: none; color: rgb(0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
 
 .hero{ 
     background-image: url("img/Escola.png");
