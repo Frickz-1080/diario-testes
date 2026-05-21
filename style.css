@@ -47,6 +47,12 @@ a {
     justify-content: space-between;
     padding: 15px;
 }
+.nav a{
+    height: 30px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+}
 
 main{
     display: flex;
@@ -107,7 +113,7 @@ main span{
     align-items: center;
     color: rgba(255, 255, 255, 0.548);
     width: 60vw;
-    flex: 1;
+    height: 50vh;
     border-radius: 10px;
     background-color: #151720;
 }
@@ -167,6 +173,9 @@ main span{
 
 
 @media (max-width:768px) {
+    .card{
+        flex: 1;
+    }
     .menu{
         display: flex;
     }
