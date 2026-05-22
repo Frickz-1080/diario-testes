@@ -1,78 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta name="color-scheme" content="light">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+
     <title>Início</title>
+
     <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="hero">
-        <div class="menu" onclick="abrirMenu()">
+
+    <header class="hero">
+        <div class="menu">
             <span></span>
             <span></span>
             <span></span>
         </div>
+
         <div class="menu-card" id="menu">
             <p>ESCOLA</p>
             <div class="menu-line"></div>
+
             <p>PROJETOS</p>
             <div class="menu-line"></div>
+
             <p>CURSOS</p>
             <div class="menu-line"></div>
+
             <p>PROFESSORES</p>
             <div class="menu-line"></div>
+
             <p>EVENTOS</p>
             <div class="menu-line"></div>
         </div>
-    </div>
-    <div class="nav">
+
+        <a class="logo" href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png" alt="instagram do jornal">@_diariojk</a>
+
+    </header>
+
+    <nav class="nav">
         <ul>
-            <a href="#escola">Escola</a>
-            <a href="#cursos">Cursos</a>
-            <a href="#professores">Horários</a>
-            <a href="#eventos" class="eventos">Eventos</a>
+            <li><a href="#escola">Escola</a></li>
+            <li><a href="#cursos">Cursos</a></li>
+            <li><a href="#professores">Horários</a></li>
+            <li class="eventos"><a href="#eventos" class="eventos">Eventos</a></li>
         </ul>
-    </div>
+    </nav>
+
     <main>
         <p class="titulo">NOVIDADES</p>
         <span>Fique por dentro das atualizações</span>
+
         <div class="container">
-            
+
             <div class="notificacoes">
-                Notificações
+
+                <span>Notificações</span>
+
                 <div class="circle-box">
-                    <div class="circle" style="background-color: #2cca61;"></div>
-                    <div class="circle" style="background-color: #00eaff;"></div>
-                    <div class="circle" style="background-color: #f0b71f;"></div>
+                    <div class="circle green" style="background-color: #2cca61;"></div>
+                    <div class="circle blue" style="background-color: #00eaff;"></div>
+                    <div class="circle yellow" style="background-color: #f0b71f;"></div>
                 </div>
+
             </div>
-            <div class="card">Sem notificações por enquanto!</div>
+
+            <div class="card">
+                Sem notificações por enquanto!
+            </div>
+
         </div>
+
     </main>
+    <script>
+        const botao = document.querySelector(".menu");
+        const menu = document.getElementById("menu");
+
+        botao.addEventListener("click", (event) => {
+            event.stopPropagation();
+            menu.classList.toggle("ativo");
+        });
+
+        document.addEventListener("click", () => {
+            menu.classList.remove("ativo");
+        });
+
+        menu.addEventListener("click", (event) => {
+            event.stopPropagation();
+        });
+    </script>
+
 </body>
-<script>
-    const botao = document.querySelector(".menu");
-    const menu = document.getElementById("menu");
-
-    botao.addEventListener("click", (event) => {
-
-        event.stopPropagation();
-        menu.classList.toggle("ativo");
-    });
-
-    document.addEventListener("click", () => {
-
-        menu.classList.remove("ativo");
-    });
-
-    menu.addEventListener("click", (event) => {
-
-        event.stopPropagation();
-    }); 
-</script>
 </html>

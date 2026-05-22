@@ -1,206 +1,296 @@
-
 *{
     margin: 0;
-    box-sizing: border-box;
     padding: 0;
+    box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
 }
+
 body{
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
     background-color: white;
+    font-family: "Poppins", sans-serif;
 }
-a {
-    text-decoration: none; color: rgb(0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
+
+a{
+    text-decoration: none;
+    color: black;
     outline: none;
     user-select: none;
+    cursor: pointer;
 }
 
-.hero{ 
-    background-image: url("img/Escola.png");
-    
-    width: 100%;
-    height: 30dvh;
-    padding: 13px;
+ul{
+    list-style: none;
+}
 
+/* HERO */
+
+.hero{
+    position: relative;
+    background-image: url("img/Escola.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    width: 100%;
+    height: 40dvh;
+
+    padding: 13px;
 }
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.logo img{
+    height: 1em;
+    transform: translateY(1px);
+}
+/* NAV */
 
 .nav{
     width: 100%;
-    justify-content: center;
+
     display: flex;
+    justify-content: center;
+
+    background-color: white;
+
     font-size: 1.2rem;
     font-weight: 300;
-    font-family: poppins;
-    box-shadow: 0px -15px 40px black;
-    background-color: white;
+
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.438);
+
     z-index: 900;
 }
+
 .nav ul{
     width: 60%;
+
     display: flex;
     justify-content: space-between;
+
     padding: 15px;
 }
+
 .nav a{
-    height: 30px;
     width: 90px;
+    height: 30px;
+
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    transition: 0.3s ease;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    font-family: poppins;
-    width: 100%;
-    background-color: white;
-}
-.titulo{
-    font-size: 2rem;
-    font-weight: 900;
-    background-color: #1c2030;
-    color: white;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-top: 35px;
-}
-main span{
-    margin-bottom: 20px;
-}
-.container{
-    color: white;
-    padding: 25px;
-    border-radius: 10px;
-    border: 3px solid #332f5e;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-}
-.notificacoes{
-    padding: 10px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    width: 60vw;
-    background-color: #2e286d;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-.circle-box{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.circle{
-    width: 25px;
-    height: 25px;
-    border-radius: 10rem;
-}
-.card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgba(255, 255, 255, 0.548);
-    width: 60vw;
-    height: 50vh;
-    border-radius: 10px;
-    background-color: #151720;
-}
-.nav a{transition: 0.3s ease;}
 .nav a:hover{
     transform: scale(1.05);
     font-weight: 500;
     color: rgb(177, 8, 177);
 }
 
-/*================MOBILE==================*/
+/* MAIN */
+
+main{
+    flex: 1;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: white;
+}
+
+.titulo{
+    margin-top: 35px;
+
+    padding-inline: 10px;
+
+    font-size: 2rem;
+    font-weight: 900;
+
+    background-color: #1c2030;
+    color: white;
+}
+
+main > span{
+    margin-bottom: 20px;
+}
+
+/* CONTAINER */
+
+.container{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 40px;
+    padding: 25px;
+
+    color: white;
+
+    border: 3px solid #332f5e;
+    border-radius: 10px;
+}
+
+.notificacoes{
+    width: 60vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+    padding: 10px;
+
+    background-color: #2e286d;
+    border-radius: 5px;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.circle-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.circle{
+    width: 25px;
+    height: 25px;
+
+    border-radius: 900%;
+}
+
+.card{
+    width: 60vw;
+    height: 50vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    background-color: #151720;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+/* MENU MOBILE */
 
 .menu{
     width: 38px;
     height: 32px;
-    display: flex;
+
+    display: none;
     flex-direction: column;
     justify-content: space-between;
+
     cursor: pointer;
-    display: none;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .menu span{
     width: 100%;
     height: 6px;
-    background-color: rgb(255, 255, 255);
+
     border-radius: 5px;
+
+    background-color: white;
 }
+
+.logo{
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+
+    color: white;
+    font-weight: 400;
+}
+
 .menu-card{
-    position: relative;
+
+    position: absolute;
+
+    width: 230px;
+
+    margin-top: 20px;
+    padding: 20px;
+
+    background-color: rgb(230, 230, 230);
+
+    border-radius: 5px;
+
+    font-family: "Poppins", sans-serif;
+
     box-shadow: 0px 0px 90px rgba(0, 0, 0, 0.479);
 
     opacity: 0;
     visibility: hidden;
+
     transition: 0.15s;
 
-    margin-top: 20px;
-    font-family: poppins;
-    width: 230px;
-    background: rgb(230, 230, 230);
-    padding: 20px;
-    border-radius: 5px;
     z-index: 999;
 }
+
 .menu-card.ativo{
     opacity: 1;
     visibility: visible;
 }
+
 .menu-line{
     width: 100%;
-    height: 1px;
+    height: 0.5px;
+
+    margin: 10px 0;
+
     background-color: rgb(158, 158, 158);
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
+/* RESPONSIVO */
 
-@media (max-width:768px) {
-    .card{
-        flex: 1;
-    }
+@media (max-width: 768px){
+
     .menu{
         display: flex;
     }
-    .nav ul{
-        font-size: 18px;
-        width: 90%;
-    }
-    .eventos{display: none;}
+
     .hero{
         background-image: url("img/hero.png");
         height: 25vh;
     }
 
-    .notificacoes{
-        padding: 10px;
-        width: 80vw;
+    .nav ul{
+        width: 90%;
+        font-size: 18px;
     }
+
+    .eventos{
+        display: none;
+    }
+
+    .notificacoes,
     .card{
-        padding: 10px;
         width: 80vw;
     }
+
     .circle{
-    width: 20px;
-    height: 20px;}
+        width: 20px;
+        height: 20px;
+    }
+
     .container{
         padding: 15px;
+    }
+
+    .card{
+        flex: 1;
     }
 }
