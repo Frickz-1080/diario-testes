@@ -258,6 +258,9 @@ main > span{
 
 @media (max-width: 768px){
 
+    .logo{
+        font-size: smaller;
+    }
     .menu{
         display: flex;
     }
