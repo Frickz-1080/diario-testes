@@ -6,7 +6,6 @@
 }
 
 body{
-    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -65,7 +64,7 @@ ul{
 }
 
 .nav ul{
-    width: 60%;
+    width: 90%;
 
     display: flex;
     justify-content: space-between;
@@ -189,5 +188,63 @@ ul{
 
     .card{
         flex: 1;
+    }
+}
+
+
+
+
+
+
+
+
+main{
+    padding: 30px;
+}
+.nome-aba{
+    font-size: 38px;
+    font-weight: 700;
+    color: #2e286d;
+    margin-bottom: 20px;
+}
+
+.btn-escolher-curso{
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    font-family: poppins;
+    padding: 6px;
+    border-radius: 5px;
+    outline: none;
+    display: flex;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.barra-horarios{
+
+    color: white;
+    background-color: #1c2030;
+    gap: 10px;
+    width: fit-content;
+    display: flex;
+    width: 350px;
+    padding: 6px 15px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+@media (max-width: 768px){
+    main{
+        padding: 20px;
+    }
+    .barra-horarios{
+        width: 100%;
+        padding: 6px 6px;
+    }
+    .nome-aba{
+        font-size: 28px;
     }
 }

@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -42,6 +43,9 @@
 
             <p>EVENTOS</p>
             <div class="menu-line"></div>
+
+            <p><a href="horarios.html">HORÁRIOS</a></p>
+            <div class="menu-line"></div>
         </div>
 
         <a class="logo" href="https://www.instagram.com/_diariojk/" target="_blank"><img src="../img/instagram.png" alt="instagram do jornal">@_diariojk</a>
@@ -57,7 +61,18 @@
         </ul>
     </nav>
     <main>
-        Direcionar Página Horários
+        <p class="nome-aba">Horários</p>
+
+        <div class="barra-horarios">
+            <label for="curso">Escolha um Curso: </label>
+            <select id="curso" name="curso" class="btn-escolher-curso">
+            <option>Análises Clínicas</option>
+            <option>Guia de Turismo</option>
+            <option>Eletrotécnica</option>
+            <option>Administração</option>
+            <option>Informática</option>
+            </select>
+        </div>
     </main>
     <script>
         const botao = document.querySelector(".menu");
