@@ -75,6 +75,11 @@
         menu.addEventListener("click", (event) => {
             event.stopPropagation();
         });
+        window.addEventListener("popstate", () => {
+        location.replace("/index.html");
+        });
+
+        history.pushState({}, "");
     </script>
 </body>
 </html>
