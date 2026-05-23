@@ -163,7 +163,7 @@ ul{
 @media (max-width: 768px){
 
     .nav a:hover{
-        background-color: black;
+        color: black;
         font-weight: 300;
     }
     .logo{

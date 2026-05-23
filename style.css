@@ -95,8 +95,6 @@ ul{
 /* MAIN */
 
 main{
-    flex: 1;
-
     width: 100%;
 
     display: flex;
@@ -104,6 +102,7 @@ main{
     align-items: center;
 
     background-color: white;
+    margin-bottom: 5px;
 }
 
 .titulo{
@@ -125,7 +124,7 @@ main > span{
 /* CONTAINER */
 
 .container{
-    flex: 1;
+    height: 400px;
 
     display: flex;
     flex-direction: column;
@@ -258,6 +257,10 @@ main > span{
 
 @media (max-width: 768px){
 
+    .nav a:hover{
+        color: black;
+        font-weight: 300;
+    }
     .logo{
         font-size: smaller;
     }
@@ -291,6 +294,8 @@ main > span{
 
     .container{
         padding: 15px;
+        background-color: #1c2030;
+        border: none;
     }
 
     .card{
