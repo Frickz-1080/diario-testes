@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light">
 
     <title>Horários</title>
 
@@ -75,14 +74,15 @@
 
             <div class="campo-select-curso">
                 <select id="curso" name="curso" class="btn-escolher-curso">
-                    <option>Análises Clínicas</option>
-                    <option>Guia de Turismo</option>
-                    <option>Eletrotécnica</option>
-                    <option>Administração</option>
-                    <option>Informática</option>
+                    <option value="140" selected>Análises Clínicas</option>
+                    <option value="240">Guia de Turismo</option>
+                    <option value="340">Eletrotécnica</option>
+                    <option value="150">Administração</option>
+                    <option value="150">Informática</option>
                 </select>
             </div>
         </div>
+        <img id="imagem" src="" alt="" style="display: none; width: 350px; height: auto;">
     </main>
     <script>
         const botao = document.querySelector(".menu");
@@ -100,6 +100,23 @@
         menu.addEventListener("click", (event) => {
             event.stopPropagation();
         });
+
+
+
+        const select = document.getElementById("curso");
+        const imagem = document.getElementById("imagem");
+
+        function atualizarImagem(){
+            if(select.value === "140"){
+                imagem.src = "../img/horarios/140.jpg";
+            }
+            else if(select.value === "240"){
+                imagem.src = "../img/horarios/240.jpg";
+            }
+        }
+        atualizarImagem();
+        select.addEventListener("change", atualizarImagem);
+        imagem.style.display = "block";
 
     </script>
 </body>
