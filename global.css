@@ -28,13 +28,14 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 17px;
     position: fixed;
-    width: 90px;
-    height: 35px;
+    width: 100px;
+    height: 38px;
     border-radius: 7px;
     background-color: #1c2030;
-    bottom: 10px;
-    left: 10px;
+    bottom: 15px;
+    left: 15px;
 }
 .voltar img{
     height: 1.5em;
@@ -184,11 +185,11 @@ main{
 
 @media (max-width: 768px){
     .voltar{
-        bottom: 15px;
+        bottom: 20px;
         left: 14px;
     }
     main{
-        padding: 27px 20px;
+        padding: 40px 20px;
     }
     .nav a:hover{
         color: black;
