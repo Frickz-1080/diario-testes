@@ -1,98 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-}
-
-body{
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    font-family: "Poppins", sans-serif;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-    outline: none;
-    user-select: none;
-    cursor: pointer;
-}
-
-ul{
-    list-style: none;
-}
-
-/* HERO */
-
-.hero{
-    position: relative;
-    background-image: url("img/Escola.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    width: 100%;
-    height: 40dvh;
-
-    padding: 13px;
-}
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-.logo img{
-    height: 1em;
-    transform: translateY(1px);
-}
-/* NAV */
-
-.nav{
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-
-    background-color: white;
-
-    font-size: 1.2rem;
-    font-weight: 300;
-
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.438);
-
-    z-index: 900;
-}
-
-.nav ul{
-    width: 60%;
-
-    display: flex;
-    justify-content: space-between;
-
-    padding: 15px;
-}
-
-.nav a{
-    width: 90px;
-    height: 30px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transition: 0.3s ease;
-}
-
-.nav a:hover{
-    transform: scale(1.05);
-    font-weight: 500;
-    color: rgb(177, 8, 177);
-}
-
-/* MAIN */
+@import url(global.css);
 
 main{
     width: 100%;
@@ -102,7 +8,6 @@ main{
     align-items: center;
 
     background-color: white;
-    margin-bottom: 5px;
 }
 
 .titulo{
@@ -120,8 +25,6 @@ main{
 main > span{
     margin-bottom: 20px;
 }
-
-/* CONTAINER */
 
 .container{
     height: 400px;
@@ -183,105 +86,7 @@ main > span{
     color: rgba(255, 255, 255, 0.55);
 }
 
-/* MENU MOBILE */
-
-.menu{
-    width: 38px;
-    height: 32px;
-
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-
-    cursor: pointer;
-}
-
-.menu span{
-    width: 100%;
-    height: 6px;
-
-    border-radius: 5px;
-
-    background-color: white;
-}
-
-.logo{
-    position: absolute;
-    bottom: 10px;
-    left: 5px;
-
-    color: white;
-    font-weight: 400;
-}
-
-.menu-card{
-
-    position: absolute;
-
-    width: 230px;
-
-    margin-top: 20px;
-    padding: 20px;
-
-    background-color: rgb(230, 230, 230);
-
-    border-radius: 5px;
-
-    font-family: "Poppins", sans-serif;
-
-    box-shadow: 0px 0px 90px rgba(0, 0, 0, 0.479);
-
-    opacity: 0;
-    visibility: hidden;
-
-    transition: 0.15s;
-
-    z-index: 999;
-}
-
-.menu-card.ativo{
-    opacity: 1;
-    visibility: visible;
-}
-
-.menu-line{
-    width: 100%;
-    height: 0.3px;
-
-    margin: 10px 0;
-
-    background-color: rgb(158, 158, 158);
-}
-
-/* RESPONSIVO */
-
 @media (max-width: 768px){
-
-    .nav a:hover{
-        color: black;
-        font-weight: 300;
-    }
-    .logo{
-        font-size: smaller;
-    }
-    .menu{
-        display: flex;
-    }
-
-    .hero{
-        background-image: url("img/hero.png");
-        height: 25vh;
-    }
-
-    .nav ul{
-        width: 90%;
-        font-size: 18px;
-    }
-
-    .eventos{
-        display: none;
-    }
-
     .notificacoes,
     .card{
         width: 80vw;

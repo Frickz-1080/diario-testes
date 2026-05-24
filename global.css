@@ -23,6 +23,24 @@ a{
 ul{
     list-style: none;
 }
+.voltar{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 90px;
+    height: 35px;
+    border-radius: 7px;
+    background-color: #1c2030;
+    bottom: 10px;
+    left: 10px;
+}
+.voltar img{
+    height: 1.5em;
+    filter: invert(1);
+    transform: translateX(-3px);
+}
 
 .hero{
     position: relative;
@@ -40,6 +58,12 @@ ul{
     display: flex;
     align-items: center;
     gap: 4px;
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+
+    color: white;
+    font-weight: 400;
 }
 .logo img{
     height: 1em;
@@ -109,15 +133,6 @@ ul{
     background-color: white;
 }
 
-.logo{
-    position: absolute;
-    bottom: 10px;
-    left: 5px;
-
-    color: white;
-    font-weight: 400;
-}
-
 .menu-card{
 
     position: absolute;
@@ -156,11 +171,25 @@ ul{
 
     background-color: rgb(158, 158, 158);
 }
+main{
+    padding: 30px;
+}
 
-/* RESPONSIVO */
+.nome-aba{
+    font-size: 38px;
+    font-weight: 700;
+    color: #2e286d;
+    margin-bottom: 20px;
+}
 
 @media (max-width: 768px){
-    
+    .voltar{
+        bottom: 15px;
+        left: 14px;
+    }
+    main{
+        padding: 27px 20px;
+    }
     .nav a:hover{
         color: black;
         font-weight: 300;
@@ -184,87 +213,6 @@ ul{
 
     .eventos{
         display: none;
-    }
-
-    .card{
-        flex: 1;
-    }
-}
-
-
-
-
-
-
-
-
-main{
-    padding: 30px;
-}
-.nome-aba{
-    font-size: 38px;
-    font-weight: 700;
-    color: #2e286d;
-    margin-bottom: 20px;
-}
-
-.btn-escolher-curso{
-    border: none;
-    background-color: white;
-    color: black;
-    font-weight: 600;
-    font-family: poppins;
-    padding: 6px 28px 6px 6px;
-    border-radius: 5px;
-    outline: none;
-    display: flex;
-    cursor: pointer;
-
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-.barra-horarios{
-    color: white;
-    background-color: #1c2030;
-    gap: 10px;
-    width: fit-content;
-    display: flex;
-    width: 350px;
-    padding: 6px 15px;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 5px;
-}
-.campo-select-curso{
-    position: relative;
-}
-
-.campo-select-curso::after{
-    content: "";
-
-    position: absolute;
-
-    right: 10px;
-    top: 45%;
-
-    width: 7px;
-    height: 7px;
-
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-
-    transform: translateY(-50%) rotate(45deg);
-
-    pointer-events: none;
-}
-@media (max-width: 768px){
-    main{
-        padding: 27px 20px;
-    }
-    .barra-horarios{
-        width: 100%;
-        padding: 10px 10px;
     }
     .nome-aba{
         font-size: 28px;

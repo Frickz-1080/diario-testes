@@ -7,7 +7,7 @@
 
     <title>Horários</title>
 
-    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="../css/horarios.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,14 +17,14 @@
 </head>
 
 <body>
-    
+    <a class="voltar" href="../index.html"><img src="../img/casavoltar.png" alt="">Início</a>
     <header class="hero">
         <div class="menu">
             <span></span>
             <span></span>
             <span></span>
         </div>
-
+        
         <div class="menu-card" id="menu">
             <p><a href="../index.html">INÍCIO</a></p>
             <div class="menu-line"></div>
@@ -60,6 +60,13 @@
             <li class="eventos"><a href="#eventos" class="eventos">Eventos</a></li>
         </ul>
     </nav>
+
+    
+    <!--======MAIN======-->
+    <!--======MAIN======-->
+    <!--======MAIN======-->
+
+
     <main>
         <p class="nome-aba">Horários</p>
 
@@ -93,11 +100,7 @@
         menu.addEventListener("click", (event) => {
             event.stopPropagation();
         });
-        window.addEventListener("popstate", () => {
-        location.replace("../index.html");
-        });
 
-        history.pushState({}, "");
     </script>
 </body>
 </html>

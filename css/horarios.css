@@ -1,0 +1,61 @@
+@import url(../global.css);
+
+.btn-escolher-curso{
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    font-family: poppins;
+    padding: 6px 28px 6px 6px;
+    border-radius: 5px;
+    outline: none;
+    display: flex;
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.barra-horarios{
+    color: white;
+    background-color: #1c2030;
+    gap: 10px;
+    width: fit-content;
+    display: flex;
+    width: 350px;
+    padding: 6px 15px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+.campo-select-curso{
+    position: relative;
+}
+
+.campo-select-curso::after{
+    content: "";
+
+    position: absolute;
+
+    right: 10px;
+    top: 45%;
+
+    width: 7px;
+    height: 7px;
+
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+
+    transform: translateY(-50%) rotate(45deg);
+
+    pointer-events: none;
+}
+@media (max-width: 768px){
+    .barra-horarios{
+        width: 100%;
+        padding: 10px 10px;
+    }
+    .nome-aba{
+        font-size: 28px;
+    }
+}
